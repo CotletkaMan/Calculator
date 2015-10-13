@@ -1,7 +1,7 @@
 package kernel;
 
-import kernel.blocks.SimpleUnit;
-import kernel.blocks.Unitable;
+import kernel.units.SimpleUnit;
+import kernel.units.Unitable;
 import kernel.operation.Operation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

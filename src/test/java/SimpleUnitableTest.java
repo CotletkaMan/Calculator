@@ -1,6 +1,6 @@
 import junit.framework.Assert;
-import kernel.blocks.SimpleUnit;
-import kernel.blocks.Unitable;
+import kernel.units.SimpleUnit;
+import kernel.units.Unitable;
 import operationimpl.operator.Divide;
 import org.junit.Test;
 

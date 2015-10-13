@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Block describes the behavior of a simple block.
  * It allows you to record only a single operator.
  */
-public class SimpleUnit implements Unitable {
+public class SimpleUnit implements Unit {
     private ArrayList<Double> data;
     private Operation operation;
     public SimpleUnit(){

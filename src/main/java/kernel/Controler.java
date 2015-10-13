@@ -1,7 +1,7 @@
 package kernel;
 
 import kernel.units.SimpleUnit;
-import kernel.units.Unitable;
+import kernel.units.Unit;
 import kernel.operation.Operation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,20 +10,20 @@ import org.apache.logging.log4j.Logger;
  * Class managed the state of the block
  */
 public class Controler {
-    private Unitable unitable;
+    private Unit unit;
     public static final Logger log = LogManager.getLogger();
 
     public Controler(){
-        unitable = new SimpleUnit();
+        unit = new SimpleUnit();
     }
 
     public void addArgument(double value){
-        unitable.addArgument(value);
+        unit.addArgument(value);
         calculate();
     }
 
     public void setOperation(Operation operation){
-        unitable.setOperation(operation);
+        unit.setOperation(operation);
         calculate();
     }
 
@@ -34,11 +34,11 @@ public class Controler {
      */
     private void calculate(){
         try {
-            double result = unitable.calculate();
+            double result = unit.calculate();
             if (Double.isFinite(result)) {
                 System.out.println(">>> " + result);
-                unitable = new SimpleUnit();
-                unitable.addArgument(result);
+                unit = new SimpleUnit();
+                unit.addArgument(result);
             }
         }
         catch(Exception e){
@@ -46,7 +46,7 @@ public class Controler {
             log.info(e.getStackTrace());
             System.out.println(e.toString());
             System.out.println("*************");
-            unitable = new SimpleUnit();
+            unit = new SimpleUnit();
         }
     }
 }

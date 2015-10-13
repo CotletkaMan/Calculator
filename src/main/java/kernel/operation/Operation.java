@@ -19,27 +19,27 @@ public abstract class Operation {
     }
 
     /**
-     * Check input parameters and invoke define function
-     * @param  data         arguments for function
+     * Check input parameters and invoke define callFunction
+     * @param  data         arguments for callFunction
      * @return              result of a operation
      * @throws Exception    occur if <code>data</code> is invalid or
-     *                      error in <code>Function</code> method
+     *                      error in <code>callFunction</code> method
      */
-    public double Calculate(Double[] data) throws Exception{
+    public double calculate(Double[] data) throws Exception{
         if(data.length != getNumArguments())
             throw new IllegalArgumentException("Not set argument for operation");
         for(int i = 0 ; i < data.length ; i++)
             if(!Double.isFinite(data[i]))
                 throw new IllegalArgumentException("Not set " + i  +  " value is ::" + data[i]);
-        return Function(data);
+        return callFunction(data);
     }
 
     /**
-     * <code>Calculate</code> method call this method defined in child
+     * <code>calculate</code> method call this method defined in child
      * for calculate results
-     * @param  data         arguments for function
+     * @param  data         arguments for callFunction
      * @return              result of a operation
-     * @throws Exception    occur if error in <code>Function</code> method
+     * @throws Exception    occur if error in <code>callFunction</code> method
      */
-    protected abstract double Function(Double[] data) throws Exception;
+    protected abstract double callFunction(Double[] data) throws Exception;
 }

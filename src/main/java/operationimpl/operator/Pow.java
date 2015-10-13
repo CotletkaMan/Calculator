@@ -10,7 +10,7 @@ public class Pow extends Operation{
         super("^" , 1);
     }
 
-    public double Function(Double[] data){
+    public double callFunction(Double[] data){
         return Math.pow(data[0] , data[1]);
     }
 }

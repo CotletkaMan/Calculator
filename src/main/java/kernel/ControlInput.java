@@ -30,7 +30,7 @@ public class ControlInput {
     public void start() throws IOException{
         String input;
         while(!(input = stream.readLine()).isEmpty()){
-            excecute(input);
+            parseInputString(input);
         }
     }
 
@@ -38,7 +38,7 @@ public class ControlInput {
      * Parse input string and find operations
      * @param input input string
      */
-    private void excecute(String input){
+    private void parseInputString(String input){
         try {
             double integer = Double.parseDouble(input);
             controler.addArgument(integer);

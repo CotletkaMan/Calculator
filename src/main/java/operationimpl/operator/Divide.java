@@ -8,7 +8,7 @@ public class Divide extends Operation {
         super("/" , 2);
     }
 
-    public double Function(Double[] data){
+    public double callFunction(Double[] data){
         return data[0] / data[1];
     }
 }

@@ -6,10 +6,10 @@ import java.util.ArrayList;
  * Block describes the behavior of a simple block.
  * It allows you to record only a single operator.
  */
-public class SimpleBlock implements Block {
+public class SimpleUnit implements Unitable {
     private ArrayList<Double> data;
     private Operation operation;
-    public SimpleBlock(){
+    public SimpleUnit(){
         data = new ArrayList<Double>();
         operation = null;
     }
@@ -44,7 +44,7 @@ public class SimpleBlock implements Block {
 
     public double calculate() throws Exception{
         if(operation != null && operation.getNumArguments() == data.size()) {
-            double result = operation.Calculate(data.toArray(new Double[data.size()]));
+            double result = operation.calculate(data.toArray(new Double[data.size()]));
             if(!Double.isFinite(result))
                 throw new Exception("result operation = " + result);
             return result;

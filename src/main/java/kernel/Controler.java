@@ -1,7 +1,7 @@
 package kernel;
 
-import kernel.blocks.Block;
-import kernel.blocks.SimpleBlock;
+import kernel.blocks.SimpleUnit;
+import kernel.blocks.Unitable;
 import kernel.operation.Operation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,35 +10,35 @@ import org.apache.logging.log4j.Logger;
  * Class managed the state of the block
  */
 public class Controler {
-    private Block block;
+    private Unitable unitable;
     public static final Logger log = LogManager.getLogger();
 
     public Controler(){
-        block = new SimpleBlock();
+        unitable = new SimpleUnit();
     }
 
     public void addArgument(double value){
-        block.addArgument(value);
+        unitable.addArgument(value);
         calculate();
     }
 
     public void setOperation(Operation operation){
-        block.setOperation(operation);
+        unitable.setOperation(operation);
         calculate();
     }
 
     /**
-     * Print result a function defined <code>setOperation</code> method.
+     * Print result a callFunction defined <code>setOperation</code> method.
      * If result is valid, he print result and create new block.
      * If occur error, the method restart defined block.
      */
     private void calculate(){
         try {
-            double result = block.calculate();
+            double result = unitable.calculate();
             if (Double.isFinite(result)) {
                 System.out.println(">>> " + result);
-                block = new SimpleBlock();
-                block.addArgument(result);
+                unitable = new SimpleUnit();
+                unitable.addArgument(result);
             }
         }
         catch(Exception e){
@@ -46,7 +46,7 @@ public class Controler {
             log.info(e.getStackTrace());
             System.out.println(e.toString());
             System.out.println("*************");
-            block = new SimpleBlock();
+            unitable = new SimpleUnit();
         }
     }
 }

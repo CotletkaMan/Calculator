@@ -8,7 +8,7 @@ public class Minus extends Operation {
         super("-" , 2);
     }
 
-    protected double Function(Double[] data){
+    protected double callFunction(Double[] data){
         return data[0] - data[1];
     }
 }

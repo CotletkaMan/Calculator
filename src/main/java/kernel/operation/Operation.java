@@ -1,5 +1,7 @@
 package kernel.operation;
 
+import java.util.List;
+
 /**
  * Operation is abstract class define any
  * actions in system
@@ -25,12 +27,12 @@ public abstract class Operation {
      * @throws Exception    occur if <code>data</code> is invalid or
      *                      error in <code>callFunction</code> method
      */
-    public double calculate(Double[] data) throws Exception{
-        if(data.length != getNumArguments())
+    public double calculate(List<Double> data) throws Exception{
+        if(data.size() != getNumArguments())
             throw new IllegalArgumentException("Not set argument for operation");
-        for(int i = 0 ; i < data.length ; i++)
-            if(!Double.isFinite(data[i]))
-                throw new IllegalArgumentException("Not set " + i  +  " value is ::" + data[i]);
+        for(int i = 0 ; i < data.size() ; i++)
+            if(!Double.isFinite(data.get(i)))
+                throw new IllegalArgumentException("Not set " + i  +  " value is ::" + data.get(i));
         return callFunction(data);
     }
 
@@ -41,5 +43,5 @@ public abstract class Operation {
      * @return              result of a operation
      * @throws Exception    occur if error in <code>callFunction</code> method
      */
-    protected abstract double callFunction(Double[] data) throws Exception;
+    protected abstract double callFunction(List<Double> data) throws Exception;
 }

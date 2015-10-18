@@ -8,6 +8,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class OperationTest {
     private Operation divide;
@@ -20,19 +23,24 @@ public class OperationTest {
 
     @Test
     public void divideBasicTest() throws Exception{
-        Double[] data = new Double[]{5. , 1.};
+        List<Double> data = new ArrayList<Double>();
+        data.add(5.);
+        data.add(1.);
         Assert.assertTrue(divide.calculate(data) == 5.);
     }
 
     @Test
     public void divideExceptionTest() throws  Exception{
-        Double[] data = new Double[]{5. , Double.NaN};
+        List<Double> data = new ArrayList<Double>();
+        data.add(5.);
+        data.add(Double.NaN);
         Assert.assertTrue(Double.isNaN(divide.calculate(data)));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void argumentTest() throws Exception{
-        Double[] data = new Double[]{1.};
+        List<Double> data = new ArrayList<Double>();
+        data.add(5.);
         divide.calculate(data);
     }
 }

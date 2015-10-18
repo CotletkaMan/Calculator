@@ -44,7 +44,7 @@ public class SimpleUnit implements Unit {
 
     public double calculate() throws Exception{
         if(operation != null && operation.getNumArguments() == data.size()) {
-            double result = operation.calculate(data.toArray(new Double[data.size()]));
+            double result = operation.calculate(data);
             if(!Double.isFinite(result))
                 throw new Exception("result operation = " + result);
             return result;

@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SelectorTest {
     private Selector selector;
     @Before
@@ -13,7 +16,9 @@ public class SelectorTest {
 
     @Test
     public void createTest(){
-        Double[] data = new Double[]{5. , 4.};
+        List<Double> data = new ArrayList<Double>();
+        data.add(5.);
+        data.add(4.);
         Operation operation = selector.getOperator("+");
         try {
             Assert.assertTrue(operation.calculate(data) == 9.);

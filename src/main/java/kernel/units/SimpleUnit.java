@@ -35,8 +35,8 @@ public class SimpleUnit implements Unit {
      * @param operation operation for block
      */
     public void setOperation(Operation operation){
-        if(data.size() > 0 && operation != null)
-            this.operation = operation;
+        if(data.size() > 0 && operation != null && this.operation == null)
+                this.operation = operation;
         else{
             System.out.println("Please input integer");
         }

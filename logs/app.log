@@ -1,1 +1,25 @@
 2015-10-09 12:22:24.353 [main] ERROR kernel.Selector - Class operationimpl.operator.Pow don't load because of name is null and(or) argument count lesser 1
+2015-10-16 11:26:27.759 [main] ERROR kernel.Selector - Class not found operation.operationimpl.operator.Divide
+2015-10-16 11:26:27.761 [main] ERROR kernel.Selector - Class not found operation.operationimpl.operator.Minus
+2015-10-16 11:26:27.761 [main] ERROR kernel.Selector - Class not found operation.operationimpl.operator.Multiple
+2015-10-16 11:26:27.761 [main] ERROR kernel.Selector - Class not found operationimpl.operator.Plus
+2015-10-16 11:26:27.761 [main] ERROR kernel.Selector - Class not found operation.operationimpl.operator.Pow
+2015-10-16 11:28:20.545 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 11:36:15.296 [main] FATAL kernel.Selector - Not found config file in path :: config.ini
+2015-10-16 11:37:08.511 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 11:40:22.484 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 12:01:08.292 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 12:06:01.152 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 12:06:39.474 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 18:26:26.951 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 19:09:25.196 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 19:09:38.123 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 19:09:51.728 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-16 19:10:03.453 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-18 16:49:31.846 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-18 16:54:59.352 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-18 16:55:14.989 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-18 16:57:02.478 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-18 16:57:14.402 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-18 16:57:41.967 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
+2015-10-18 17:03:40.196 [main] ERROR kernel.Selector - Class not found kernel.operationimpl.operator.Plus
